@@ -1,0 +1,17 @@
+graph TB
+    A[Client Web/App] --> B[API Gateway]
+    B --> C[Auth Service]
+    B --> D[PA Orchestrator]
+    B --> E[Portfolio Analytics]
+    B --> F[Blockchain Gateway]
+    B --> G[Security Monitor]
+    
+    D --> H[ML Inference Engine]
+    E --> I[Market Data Pipeline]
+    F --> J[Smart Contract Manager]
+    G --> K[Threat Intelligence]
+    
+    L[Redis Cluster] --> D
+    M[TimescaleDB] --> E
+    N[PostgreSQL] --> C
+    O[IPFS Cluster] --> F
